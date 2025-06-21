@@ -1,6 +1,6 @@
 # Direct3D-TFJS
 
-Direct3D-TFJS is a small WebGL renderer powered by [TensorFlow.js](https://www.tensorflow.org/js). It renders volumetric data using a custom ray marching shader and provides utilities for drawing WebGL textures to an HTML canvas. The code is intended to be used in browser-based experiments or applications that need to visualize 3D grids with GPU acceleration.
+Direct3D-TFJS is a small WebGL renderer powered by [TensorFlow.js](https://www.tensorflow.org/js). It renders volumetric data using a custom ray marching shader and provides utilities for drawing WebGL textures to an HTML canvas. The code is intended for browser-based experiments or applications that need to visualize 3D grids with GPU acceleration.
 
 ## Features
 
@@ -18,20 +18,19 @@ Shaders/
   rayMarching.js   # GLSL code for the ray marching kernel
 ```
 
-## Getting Started
+## Installation
 
-The modules are written as ES modules and expect TensorFlow.js and a WebGL2‑capable browser environment.
-
-1. Include TensorFlow.js in your project:
-
-```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+```
+npm install direct3d-tfjs
 ```
 
-2. Import the renderer and create an instance:
+The package is distributed as ES modules and expects TensorFlow.js and a WebGL2‑capable browser environment. It can be used as a lightweight alternative to PixelDraw for TensorFlow.js based projects.
+
+
+## Usage
 
 ```javascript
-import { Renderer3D } from './Renderer3D.js';
+import { Renderer3D } from 'direct3d-tfjs';   
 
 const canvas = document.getElementById('view');
 const engine = { grid: tf.tensor3d(/* volume data */) };
@@ -44,7 +43,7 @@ renderer.render();
 
 ## Notes
 
-The project is experimental and does not include a build system or npm packaging. The code can be used directly in the browser with ES module imports. Ensure that the canvas has a WebGL2 context and that TensorFlow.js is loaded before creating the renderer.
+The project is experimental. Ensure that the canvas has a WebGL2 context and that TensorFlow.js is loaded before creating the renderer.
 
 ## License
 

@@ -1,0 +1,19 @@
+{
+  "name": "direct3d-tfjs",
+  "version": "1.0.0",
+  "description": "WebGL volume renderer powered by TensorFlow.js. A lightweight alternative to PixelDraw for 3D visualization.",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [
+    "tensorflow",
+    "webgl",
+    "volume",
+    "renderer",
+    "3d"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": ""
+}
